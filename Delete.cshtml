@@ -1,0 +1,23 @@
+﻿@model Microsoft.AspNet.Identity.EntityFramework.IdentityRole
+@{
+    ViewBag.Title = "Delete";
+}
+<h2>Delete</h2>
+@*<style type="text/css">
+    #tableDelete, .c {
+        border: double;
+    }
+</style>*@
+
+@using (Html.BeginForm())
+{
+    <table>
+        <tr>
+            <td class="c">Enter Role Name To be Deleted:</td>
+            <td class="c">
+                @Html.EditorFor(m => m.Name)
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="Delete Role" />
+}
